@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Waiting_Sprite_Style.css">
+    <link rel="stylesheet" href="Waiting_Main_Style.css">
+    <link rel="stylesheet" href="Waiting_Jour_Style.css">
+    <script rel="text/javascript" src="Waiting_Jour_Script.js"></script>
+    <script rel="text/javascript" src="Waiting_Backing.js"></script>
+	<script rel="text/javascrpt" src="Waiting_Sprite_Backing.js"></script>
+	<!--DELETE SCRIPT ON PACKAGE RELEASE - TESTING ONLY-->
+	<!--Kaelen Oran-->
+	<script rel="text/javascript" src="PERSONALDATA.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js" integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="/path/to/howler.js"></script>
+    <title>The Waiting Room</title>
+
+	<!--
+	BUILT BY KAELEN ORAN
+	PROPERTY OF KidswO Game Development
+	-->
+</head>
+<body>
+
+<!--Main Document Method-->
+
+<script>
+
+//Main Method
+window.addEventListener('load', function() {
+
+document.getElementById('screenLoad').style.display = 'none';
+
+var screenElem = document.getElementById('screenStart');
+
+var screenTime = setTimeout(() => {
+	var screenCheck = screenElem.checkVisibility ({
+		visibilityProperty: true,
+	});
+	if (screenCheck == true) {
+		document.getElementById('cap3').style.display = 'inline';
+	}
+}, 900000); 
+
+var reschValue = Number(localStorage.getItem('reschValue'));
+
+switch (reschValue) {
+	case 1:
+		document.getElementById('rotResch').style.display = 'inline';
+		break;
+	case 2:
+		document.getElementById('rotResch').style.display = 'inline';
+		document.getElementById('buntResch').style.display = 'inline';
+		break;
+	case 3: 
+		document.getElementById('rotResch').style.display = 'inline';
+		document.getElementById('buntResch').style.display = 'inline';
+		document.getElementById('tagResch').style.display = 'inline';
+		break;
+};
+
+document.getElementById('masterSlider').oninput = function() {
+	howler.volume(this.value);
+};
+
+document.getElementById('musicSlider').oninput = function() {
+	waitingRoom.volume(this.value);
+};
+
+document.getElementById('SFXSlider').oninput = function() {
+	ui.volume(this.value);
+	openJor.volume(this.value);
+	closeJor.volume(this.value);
+	pageUp.volume(this.value);
+	pageDown.volume(this.value);
+
+	for (var i = 0; i < pageplay.length; i++) {
+		howlpage[pageplay[i]].volume(this.value);
+	};
+};
+
+document.getElementById('diaSlider').oninput = function() {
+	for (var i = 0; i < tagFrontLine.length; i++) {
+		howlFrontLine[tagFrontLine[i]].volume(this.value);
+	};
+};
+
+});
+
+//Sound Variables
+//Starting the room
+
+var click = new Howl ({
+	src: ['Sound_Assets/switch_sound.mp3'],
+	volume: 0.3,
+	html5: true,
+	onend: function() {
+		waitingRoom.play();
+	}
+});
+
+//Waiting Room Back Track
+var waitingRoom = new Howl ({
+	src: ['Sound_Assets/THE_WAITING_ROOM.mp3'],
+	autoplay: true,
+	loop: true,
+	volume: 0.4,
+	html5: true, 
+});
+
+//Journal Sound Effects
+var ui = new Howl({
+	src: ['Sound_Assets/UI_Click.mp3'],
+	volume: 0.5,
+	html5: true,
+});
+
+var openJor = new Howl({
+	src: ['Sound_Assets/Book_Opening.mp3'],
+	volume: 0.5,
+	html5: true,
+});
+
+var closeJor = new Howl({
+	src: ['Sound_Assets/Book_Close.mp3'],
+	volume: 0.5,
+	html5: true,
+});
+
+var pageplay = ['Sound_Assets/PageOneWhisper', 'Sound_Assets/PageTurnOne', 'Sound_Assets/PageTurnTwo', 'Sound_Assets/PageTurnThree'];
+var howlpage = {};
+for (var i = 0; i < pageplay.length; i++) {
+	howlpage[pageplay[i]] = new Howl({
+		src: [pageplay[i] + '.mp3'],
+		volume: 0.5,
+		html5: true,
+	});
+};
+
+//Player Sound Effects
+var squeakPlay = ['Sound_Assets/Normal_Squeak/Squeak_One', 'Sound_Assets/Normal_Squeak/Squeak_Two', 'Sound_Assets/Normal_Squeak/Squeak_Three', 'Sound_Assets/Normal_Squeak/Squeak_Four', 'Sound_Assets/Normal_Squeak/Squeak_Five'];
+var howlSqueak = {};
+for (var i = 0; i < squeakPlay.length; i++) {
+	howlSqueak[squeakPlay[i]] = new Howl({
+		src: [squeakPlay[i] + '.wav'],
+		volume: 0.5,
+		html5: true,
+	});
+};
+
+//Tag Sprite Sound Effects
+var pageUp = new Howl({
+	src: ['Sound_Assets/Paper_Look_Up.mp3'],
+	volume: 0.5,
+	html5: true,
+});
+
+var pageDown = new Howl({
+	src: ['Sound_Assets/Paper_Set_Down.mp3'],
+	volume: 0.5,
+	html5: true,
+});
+
+var tagFrontLine = ['Voice_Lines/Sarc_1', 'Voice_Lines/Sarc_2', 'Voice_Lines/Agr_3', 'Voice_Lines/Agr_4'];
+var howlFrontLine = {};
+for (var i = 0; i < tagFrontLine.length; i++) {
+	howlFrontLine[tagFrontLine[i]] = new Howl({
+		src: [tagFrontLine[i] + '.mp3'],
+		volume: 0.5,
+		html5: true,
+	});
+};
+
+var tagSqueak = ['Voice_Lines/Tag_Squeak_One', 'Voice_Lines/Tag_Squeak_Two', 'Voice_Lines/Tag_Squeak_Three', 'Voice_Lines/Tag_Squeak_Four', 'Voice_Lines/Tag_Squeak_Five'];
+var howlTagSqueak = {};
+for (var i = 0; i < tagSqueak.length; i++) {
+	howlTagSqueak[tagSqueak[i]] = new Howl({
+		src: [tagSqueak[i] + '.wav'],
+		volume: 0.5,
+		html5: true,
+	});
+};
+
+var tagOffend = ['Voice_Lines/Offend_1', 'Voice_Lines/Offend_2'];
+var howlOffend = {};
+for (var i = 0; i < tagOffend.length; i++) {
+	howlOffend[tagOffend[i]] = new Howl({
+		src: [tagOffend[i] + '.mp3'],
+		volume: 0.5,
+		html5: true,
+	});
+};
+
+
+</script>
+
+<!--Head Assets-->
+
+<div style="position: absolute; width: 200px; height: 150px; background-color: black; margin-left: 5px; margin-top: 5px;">
+	<div style="color: white; padding: 15px; text-align: center;">
+		<p>Press J to open the Journal</p>
+		<p>Press E to close the Journal</p>
+		<p>Press S to "Speak Puppet"</p>
+	</div>
+</div>
+
+<!--Loading Screen Image-->
+
+<div id="screenLoad">
+	<img id="loadImg" src="Sprite_Assets/LoadingScreen.gif"></img>
+	<!--Waving Text-->
+	<div class="wavy">
+        <span style="--i:1">L</span>
+        <span style="--i:2">o</span>
+        <span style="--i:3">a</span>
+        <span style="--i:4">d</span>
+        <span style="--i:5">i</span>
+        <span style="--i:6">n</span>
+        <span style="--i:7">g</span>
+        <span style="--i:8">.</span>
+        <span style="--i:9">.</span>
+		<span style="--i:10">.</span>
+    </div>
+
+</div>
+
+<!--Journal Assets-->
+
+<!--Journal Overlay-->
+<div class="jourLay" id="jourOverlay">
+	
+	<!--Open Journal Menu-->
+	<img id="openjor" src="Journal_Assets/JournalOpen.png" alt="Open Journal">
+
+		<!--Journal Menu UI-->
+		<div id="ui">
+			<img id="jourTitle" src="Journal_Assets/Title.png"></img>
+			<img onclick="moveRev()" onmouseover="spriteReview()" onmouseout="spriteBackRev()" id="jourReview" src="Journal_Assets/OptionReview.png"></img>
+			<img id="jourMap" src="Journal_Assets/OptionMap.png"></img>
+			<img onclick="moveKey()" onmouseover="spriteKey()" onmouseout="spriteBackKey()" id="jourKey" src="Journal_Assets/OptionKey.png"></img>
+			<img onmouseover="spriteCredit()" onmouseout="spriteBackCredit()" id="jourCredit" src="Journal_Assets/OptionCredit.png"></img>
+
+			<img onclick="moveWindow()" onmouseover="spriteWindow()" onmouseout="spriteBackWin()" id="jourWindow" src="Journal_Assets/OptionWindow.png"></img>
+			<img onclick="moveAudio()" onmouseover="spriteAudio()" onmouseout="spriteBackAud()" id="jourAudio" src="Journal_Assets/OptionAudio.png"></img>
+			<img onclick ="moveVisual()" onmouseover="spriteVisual()" onmouseout="spriteBackVis()" id="jourVisual" src="Journal_Assets/OptionVisual.png"></img>
+		</div>
+
+		<!--Back Arrow-->
+		<div class="mainHide" id="ar">
+			<img onclick="moveArrow()" onmouseover="spriteArrow()" onmouseout="spriteBackAr()" id="jourArrow" src="Journal_Assets/arrow.png"></img>
+		</div>
+
+		<!--Research Menu-->
+		<div class="mainHide" id="resch">
+			<div id="pageOne">
+				<img id="labOne" src="Journal_Assets/ResLabelOne.png"></img>
+				<img id="rotResch" src="Journal_Assets/RotResearch.png"></img>
+			</div>
+			<div id="pageTwo">
+				<img id="labTwo" src="Journal_Assets/ResLabelTwo.png"></img>
+				<img id="buntResch" src="Journal_Assets/BuntResearch.png"></img>
+				<img id="tagResch" src="Journal_Assets/TagResearch.png"></img>
+			</div>
+		</div>
+
+		<!--Upgrade Menu-->
+		<div class="mainHide" id="upgr">
+			<img id="jourBadge" src="Journal_Assets/BadgePage.png"></img>
+			<img onmouseover="spriteBadge()" onmouseout="spriteBackBadge()" id="badgeHead" src="Journal_Assets/BadgeUpgrade.png"></img>
+			<img id="jourUpgrade" src="Journal_Assets/UpgradePage.png"></img>
+		</div>
+
+		<!--Settings Section-->
+		<!--Window Settings-->
+		<div class="mainHide" id="win">
+			<img id="jourWinTitle" src="Journal_Assets/WinTitle.png"></img>
+			<img id="jourRefresh" src="Journal_Assets/Refresh.png"></img>
+			<img id="jourFullOn" src="Journal_Assets/On.png" onmouseover="fullOn()" onmouseout="fullOnOut()" onclick="fullScreenOn()"></img>
+			<img id="jourFullOff" src="Journal_Assets/Off.png" onmouseover="fullOff()" onmouseout="fullOffOut()" onclick="fullScreenOff()"></img>
+			<img id="jourFPSOn" src="Journal_Assets/On.png" onmouseover="FPSOn()" onmouseout="FPSOnOut()" onclick="FPSCount()"></img>
+			<img id="jourFPSOff" src="Journal_Assets/Off.png" onmouseover="FPSOff()" onmouseout="FPSOffOut()"></img>
+		</div>
+
+		<!--Audio Settings-->
+		<div class="mainHide" id="aud">
+			<img id="jourAudTitle" src="Journal_Assets/AudTitle.png"></img>
+			<input class="slider" id="masterSlider" type="range" min="0.0" max="1.0" step="0.01" value="0.5"></input>
+			<input class="slider" id="musicSlider" type="range" min="0.0" max="1.0" step="0.01" value="0.4"></input>
+			<input class="slider" id="SFXSlider" type="range" min="0.0" max="1.0" step="0.01" value="0.5"></input>
+			<input class="slider" id="diaSlider" type="range" min="0.0" max="1.0" step="0.01" value="0.5"></input>
+		</div>
+
+		<!--Visual Settings-->
+		<div class="mainHide" id="vis">
+			<img id="jourVisTitle" src="Journal_Assets/VisTitle.png"></img>
+			<img id="jourCurOn" src="Journal_Assets/On.png" onmouseover="curOn()" onmouseout="curOnOut()"></img>
+			<img id="jourCurOff" src="Journal_Assets/Off.png" onmouseover="curOff()" onmouseout="curOffOut()"></img>
+			<img id="jourLarge" src="Journal_Assets/Large.png" onmouseover="largeHover()" onmouseout="largeOut()" onclick="largeAct()"></img>
+			<img id="jourMedium" src="Journal_Assets/Medium.png" onmouseover="mediumHover()" onmouseout="mediumOut()" onclick="mediumAct()"></img>
+			<img id="jourSmall" src="Journal_Assets/Small.png" onmouseover="smallHover()" onmouseout="smallOut()" onclick="smallAct()"></img>
+			<img id="jourHighOn" src="Journal_Assets/On.png" onmouseover="highOn()" onmouseout="highOnOut()"></img>
+			<img id="jourHighOff" src="Journal_Assets/Off.png" onmouseover="highOff()" onmouseout="highOffOut()"></img>
+		</div>
+	</img>
+</div>
+
+<!--Starting Screen-->
+<div id="screenStart" onclick="roomStart()">
+</div>
+
+<p id="fps"></p>
+
+<!--ORANGE GUY AREA!!-->
+<!--Dialogue Container-->
+
+<div id="capContainer">
+
+    <p class="cap" id="cap1">Tag: Must be one interesting book, huh?</p>
+    <p class="cap" id="cap2">Tag: You gonna say something? Or is that book just so much more interesting than your <span class="italic">dear pal?</span></p>
+	<p class="cap" id="cap3">Tag:...You know I CAN see you, right? <span class="italic">It's always something new with these Headless, I swear.</span></p>
+    <p class="cap" id="cap4">Tag: Watch your tone.</p>
+    <p class="cap" id="cap5">Tag: Do you kiss your mother with that mouth?</p>
+    <p class="cap" id="cap6">Tag: Don't touch my stuff.</p>
+    <p class="cap" id="cap7">Tag: Hey, I just said not to touch my stuff. Are you ignoring me?</p>
+    <p class="cap" id="cap8">Tag: Don't you have something better to do?</p>
+    <p class="cap" id="cap9">Tag: Are you looking for something? Because whatever you are looking for, it's not in my belongings pal.</p>
+    <p class="cap" id="cap10">Tag: Sure, yeah, just waltz right in and bother me. It's my favorite greeting.</p>
+	<p class="cap" id="cap11">Tag: Pleasure to meet you too, I guess.</p>
+    <p class="cap" id="cap12">Tag: If you're looking for...It, IT'S locked. He hasn't opened it yet.</p>
+    <p class="cap" id="cap13">Tag: Trust me, I want you to leave too, but it isn't open yet.</p>
+    <p class="cap" id="cap14">Tag: Maybe come back later.</p>
+</div>
+
+<!--Sprites-->
+<img id="tag" src="Sprite_Assets/Tag_Idle.png" onmouseover="tagInteract()" onmouseout="tagOut()" onclick="tagSpeak()"></img>
+
+<!--Base Room Build-->
+<div id="floor"></div>
+
+    
+</body>
+</html>

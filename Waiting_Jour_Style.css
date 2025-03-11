@@ -1,0 +1,527 @@
+/* Journal Overlay */
+
+#jourOverlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.8);
+	z-index: 12;
+	display: none;
+}
+
+/* Open Journal Menu */
+
+#openjor {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 1000px;
+	height: auto;
+}
+
+/* Journal Menu UI */
+
+#ui {
+	display: inline;
+}
+
+#jourTitle {
+	position: absolute;
+	left: -75px;
+	right: 0;
+	top: -550px;
+	bottom: 0;
+	margin: auto;
+	width: 800px;
+	height: auto;
+}
+
+#jourReview {
+	position: absolute;
+	left: -475px;
+	right: 0;
+	top: -250px;
+	bottom: 0;
+	margin: auto;
+	width: 325px;
+	height: auto;
+	transition: width 0.2s;
+	cursor: pointer;
+}
+
+#jourMap {
+	position: absolute;
+	left: -495px;
+	right: 0;
+	top: -75px;
+	bottom: 0;
+	margin: auto;
+	width: 225px;
+	height: auto;
+	transition: width 0.2s;
+	cursor: pointer;
+}
+
+#jourKey {
+	position: absolute;
+	left: -490px;
+	right: 0;
+	top: 150px;
+	bottom: 0;
+	margin: auto;
+	width: 200px;
+	height: auto;
+	transition: width 0.2s;
+	cursor: pointer;
+}
+
+#jourCredit {
+	position: absolute;
+	left: -485px;
+	right: 0;
+	top: 375px;
+	bottom: 0;
+	margin: auto;
+	width: 150px;
+	height: auto;
+	transition: width 0.2s;
+	cursor: pointer;
+}
+
+#jourWindow {
+	position: absolute;
+	left: 0;
+	right: -475px;
+	top: -235px;
+	bottom: 0;
+	margin: auto;
+	width: 350px;
+	height: auto;
+	transition: width 0.2s;
+	cursor: pointer;
+}
+
+#jourAudio {
+	position: absolute;
+	left: 0;
+	right: -475px;
+	top: -65px;
+	bottom: 0;
+	margin: auto;
+	width: 325px;
+	height: auto;
+	transition: width 0.2s;
+	cursor: pointer;
+}
+
+#jourVisual {
+	position: absolute;
+	left: 0;
+	right: -475px;
+	top: 125px;
+	bottom: 0;
+	margin: auto;
+	width: 325px;
+	height: auto;
+	transition: width 0.2s;
+	cursor: pointer;
+}
+
+/* Journal Arrow */
+
+#ar {
+	display: none;
+}
+
+#jourArrow {
+	position: absolute;
+	left: -860px;
+	right: 0;
+	top: -625px;
+	bottom: 0;
+	margin: auto;
+	width: 35px;
+	height: auto;
+	transition: width 0.2s;
+	cursor: pointer;
+}
+
+/* Journal Upgrade Menu */
+
+#upgr {
+	display: none;
+}
+
+#jourBadge {
+	position: absolute;
+	left: -475px;
+	right: 0;
+	top: -75px;
+	bottom: 0;
+	margin: auto;
+	width: 400px;
+	height: auto;
+}
+
+#badgeHead {
+	position: absolute;
+	left: -782px;
+	right: 0;
+	top: -148px;
+	bottom: 0;
+	margin: auto;
+	width: 98px;
+	height: auto;
+	cursor: pointer;
+}
+
+#jourUpgrade {
+	display: none;
+	position: absolute;
+	left: 475px;
+	right: 0;
+	top: -25px;
+	bottom: 0;
+	margin: auto;
+	width: 425px;
+	height: auto;
+}
+
+/* Journal Research Menu */
+
+#resch {
+	display: none;
+}
+
+/* Page One */
+
+#pageOne {
+	display: inline;
+}
+
+#labOne {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -675px;
+	bottom: 0;
+	margin: auto;
+	width: 525px;
+	height: auto;
+}
+
+#rotResch {
+	position: absolute;
+	left: -465px;
+	right: 0;
+	top: -40px;
+	bottom: 0;
+	margin: auto;
+	width: 425px;
+	height: auto;
+	display: none;
+}
+
+/* Second Page */
+
+#pageTwo {
+	display: none;
+}
+
+#labTwo {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -675px;
+	bottom: 0;
+	margin: auto;
+	width: 525px;
+	height: auto;
+}
+
+#buntResch {
+	position: absolute;
+	left: -480px;
+	right: 0;
+	top: -40px;
+	bottom: 0;
+	margin: auto;
+	width: 430px;
+	height: auto;
+	display: none;
+}
+
+#tagResch {
+	position: absolute;
+	left: 0;
+	right: -480px;
+	top: -10px;
+	bottom: 0;
+	margin: auto;
+	width: 430px;
+	height: auto;
+	display: none;
+}
+
+/* Journal Window Settings UI */
+
+#win {
+	display: none;
+}
+
+#jourWinTitle {
+	position: absolute;
+	left: -475px;
+	right: 0;
+	top: -240px;
+	bottom: 0;
+	margin: auto;
+	width: 275px;
+	height: auto;
+}
+
+#jourRefresh {
+	position: absolute;
+	left: -475px;
+	right: 0;
+	top: 425px;
+	bottom: 0;
+	margin: auto;
+	width: 325px;
+	height: auto;
+}
+
+#jourFullOn {
+	position: absolute;
+	left: -645px;
+	right: 0;
+	top: 0px;
+	bottom: 0;
+	margin: auto;
+	transition: width 0.2s;
+	width: 50px;
+	height: auto;
+}
+
+#jourFullOff {
+	position: absolute;
+	left: -365px;
+	right: 0;
+	top: 5px;
+	bottom: 0;
+	margin: auto;
+	transition: width 0.2s;
+	width: 75px;
+	height: auto;
+}
+
+#jourFPSOn {
+	position: absolute;
+	left: -645px;
+	right: 0;
+	top: 270px;
+	bottom: 0;
+	margin: auto;
+	transition: width 0.2s;
+	width: 50px;
+	height: auto;
+}
+
+#jourFPSOff {
+	position: absolute;
+	left: -365px;
+	right: 0;
+	top: 275px;
+	bottom: 0;
+	margin: auto;
+	transition: width 0.2s;
+	width: 75px;
+	height: auto;
+}
+
+/* Journal Audio Settings UI */
+
+#aud {
+	display: none;
+}
+
+#jourAudTitle {
+	position: absolute;
+	left: -475px;
+	right: 0;
+	top: -100px;
+	bottom: 0;
+	margin: auto;
+	width: 385px;
+	height: auto;
+}
+
+.slider {
+	appearance: none;
+	outline: #000000 solid 3px;
+	background: none;
+	height: 10px;
+	border-radius: 3px;
+}
+
+.slider::-webkit-slider-thumb {
+	width: 10px;
+	height: 25px;
+	outline: #000000 solid 1px;
+	background-color: #000000;
+}
+
+.slider::-moz-range-thumb {
+	width: 10px;
+	height: 25px;
+	outline: #000000 solid 1px;
+	background-color: #000000;
+}
+
+#masterSlider {
+	position: absolute;
+	left: -475px;
+	right: 0;
+	top: -160px;
+	bottom: 0;
+	margin: auto;
+	width: 300px;
+}
+
+#musicSlider {
+	position: absolute;
+	left: -475px;
+	right: 0;
+	top: 55px;
+	bottom: 0;
+	margin: auto;
+	width: 300px;
+}
+
+#SFXSlider {
+	position: absolute;
+	left: -475px;
+	right: 0;
+	top: 290px;
+	bottom: 0;
+	margin: auto;
+	width: 300px;
+}
+
+#diaSlider {
+	position: absolute;
+	left: -475px;
+	right: 0;
+	top: 550px;
+	bottom: 0;
+	margin: auto;
+	width: 300px;
+}
+
+/* Journal Visual Settings UI */
+
+#vis {
+	display: none;
+}
+
+#jourVisTitle {
+	position: absolute;
+	left: -475px;
+	right: 0;
+	top: -100px;
+	bottom: 0;
+	margin: auto;
+	width: 365px;
+	height: auto;
+}
+
+#jourCurOn {
+	position: absolute;
+	left: -645px;
+	right: 0;
+	top: -130px;
+	bottom: 0;
+	margin: auto;
+	transition: width 0.2s;
+	width: 50px;
+	height: auto;
+}
+
+#jourCurOff {
+	position: absolute;
+	left: -365px;
+	right: 0;
+	top: -135px;
+	bottom: 0;
+	margin: auto;
+	transition: width 0.2s;
+	width: 75px;
+	height: auto;
+}
+
+#jourLarge {
+	position: absolute;
+	left: -780px;
+	right: 0;
+	top: 135px;
+	bottom: 0;
+	margin: auto;
+	transition: width 0.2s;
+	width: 105px;
+	height: auto;
+}
+
+#jourMedium {
+	position: absolute;
+	left: -478px;
+	right: 0;
+	top: 129px;
+	bottom: 0;
+	margin: auto;
+	transition: width 0.2s;
+	width: 135px;
+	height: auto;
+}
+
+#jourSmall {
+	position: absolute;
+	left: -175px;
+	right: 0;
+	top: 129px;
+	bottom: 0;
+	margin: auto;
+	transition: width 0.2s;
+	width: 85px;
+	height: auto;
+}
+
+#jourHighOn {
+	position: absolute;
+	left: -645px;
+	right: 0;
+	top: 540px;
+	bottom: 0;
+	margin: auto;
+	transition: width 0.2s;
+	width: 50px;
+	height: auto;
+}
+
+#jourHighOff {
+	position: absolute;
+	left: -365px;
+	right: 0;
+	top: 545px;
+	bottom: 0;
+	margin: auto;
+	transition: width 0.2s;
+	width: 75px;
+	height: auto;
+}

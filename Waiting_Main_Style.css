@@ -1,0 +1,33 @@
+/* CSS FILE Sets up the basic components of the room*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+	font-family: Kiddosy-Regular;
+	src: url(Fonts/Kiddosy_Regular.otf);
+}
+
+html {
+    font-family: Kiddosy-Regular;
+    width: 100%;
+    height: 100vh;
+    cursor: url('Sprite_Assets/cursor.png'), auto;
+}
+
+body {
+    background-color:#ff943f;
+}
+
+/* Starting Black Screen */
+
+#screenStart {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    z-index: 15;
+}
