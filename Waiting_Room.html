@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	<style>
+	</style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Waiting_Sprite_Style.css">
     <link rel="stylesheet" href="Waiting_Main_Style.css">
@@ -92,7 +94,7 @@ document.getElementById('diaSlider').oninput = function() {
 //Starting the room
 
 var click = new Howl ({
-	src: ['Sound_Assets/switch_sound.mp3'],
+	src: ['switch_sound.mp3'],
 	volume: 0.3,
 	html5: true,
 	onend: function() {
@@ -102,7 +104,7 @@ var click = new Howl ({
 
 //Waiting Room Back Track
 var waitingRoom = new Howl ({
-	src: ['Sound_Assets/THE_WAITING_ROOM.mp3'],
+	src: ['THE_WAITING_ROOM.mp3'],
 	autoplay: true,
 	loop: true,
 	volume: 0.4,
@@ -111,19 +113,19 @@ var waitingRoom = new Howl ({
 
 //Journal Sound Effects
 var ui = new Howl({
-	src: ['Sound_Assets/UI_Click.mp3'],
+	src: ['UI_Click.mp3'],
 	volume: 0.5,
 	html5: true,
 });
 
 var openJor = new Howl({
-	src: ['Sound_Assets/Book_Opening.mp3'],
+	src: ['Book_Opening.mp3'],
 	volume: 0.5,
 	html5: true,
 });
 
 var closeJor = new Howl({
-	src: ['Sound_Assets/Book_Close.mp3'],
+	src: ['Book_Close.mp3'],
 	volume: 0.5,
 	html5: true,
 });
