@@ -1,6 +1,6 @@
 function jourOpen(evt) {
 
-	var pageplay = ['Sound_Assets/PageOneWhisper', 'Sound_Assets/PageTurnOne', 'Sound_Assets/PageTurnTwo', 'Sound_Assets/PageTurnThree'];
+	var pageplay = ['PageOneWhisper', 'PageTurnOne', 'PageTurnTwo', 'PageTurnThree'];
 	var pageplayFile = pageplay[Math.floor(Math.random() * pageplay.length)];
 
 	//Returns the parent elements visibility
@@ -46,7 +46,7 @@ function jourOpen(evt) {
 	}
 	//Speaking Puppet by pressing S
 	else if (evt.key == "s") {
-		var squeakPlay = ['Sound_Assets/Normal_Squeak/Squeak_One', 'Sound_Assets/Normal_Squeak/Squeak_Two', 'Sound_Assets/Normal_Squeak/Squeak_Three', 'Sound_Assets/Normal_Squeak/Squeak_Four', 'Sound_Assets/Normal_Squeak/Squeak_Five'];
+		var squeakPlay = ['Squeak_One', 'Squeak_Two', 'Squeak_Three', 'Squeak_Four', 'Normal_Squeak/Squeak_Five'];
     	var squeakFile = squeakPlay[Math.floor(Math.random() * squeakPlay.length)];
 
 		howlSqueak[squeakFile].play();
@@ -100,37 +100,37 @@ function fullScreenOff() {
 
 //Highlighting the Back Arrow
 function spriteArrow() {
-	document.getElementById('jourArrow').src = "Journal_Assets/arrowHigh.png";
+	document.getElementById('jourArrow').src = "arrowHigh.png";
 	document.getElementById('jourArrow').style.width = "45px";
 	ui.play();
 }
 
 function spriteBackAr() {
-	document.getElementById('jourArrow').src = "Journal_Assets/arrow.png";
+	document.getElementById('jourArrow').src = "arrow.png";
 	document.getElementById('jourArrow').style.width = "35px";
 }
 
 //Highlighting Review Option
 	function spriteReview() {
-		document.getElementById('jourReview').src = "Journal_Assets/OptionReviewHigh.png";
+		document.getElementById('jourReview').src = "OptionReviewHigh.png";
 		document.getElementById('jourReview').style.width = "350px";
 		ui.play();
 	}
 	
 	function spriteBackRev() {
-		document.getElementById('jourReview').src = "Journal_Assets/OptionReview.png";
+		document.getElementById('jourReview').src = "OptionReview.png";
 		document.getElementById('jourReview').style.width = "325px";
 	}
 
 //Highlighting Key Option
 	function spriteKey() {
-		document.getElementById('jourKey').src = "Journal_Assets/OptionKeyHigh.png";
+		document.getElementById('jourKey').src = "OptionKeyHigh.png";
 		document.getElementById('jourKey').style.width = "225px";
 		ui.play();
 	}
 
 	function spriteBackKey() {
-		document.getElementById('jourKey').src = "Journal_Assets/OptionKey.png";
+		document.getElementById('jourKey').src = "OptionKey.png";
 		document.getElementById('jourKey').style.width = "200px";
 	}
 
@@ -145,173 +145,173 @@ function spriteBackAr() {
 
 //Highlighting Credit Option
 	function spriteCredit() {
-		document.getElementById('jourCredit').src = "Journal_Assets/OptionCreditHigh.png";
+		document.getElementById('jourCredit').src = "OptionCreditHigh.png";
 		document.getElementById('jourCredit').style.width = "175px";
 		ui.play();
 	}
 
 	function spriteBackCredit() {
-		document.getElementById('jourCredit').src = "Journal_Assets/OptionCredit.png";
+		document.getElementById('jourCredit').src = "OptionCredit.png";
 		document.getElementById('jourCredit').style.width = "150px";
 	}
 
 	//Highlighting Window Option
 	function spriteWindow() {
-		document.getElementById('jourWindow').src = "Journal_Assets/OptionWindowHigh.png";
+		document.getElementById('jourWindow').src = "OptionWindowHigh.png";
 		document.getElementById('jourWindow').style.width = "375px";
 		ui.play();
 	}
 
 	function spriteBackWin() {
-		document.getElementById('jourWindow').src = "Journal_Assets/OptionWindow.png";
+		document.getElementById('jourWindow').src = "OptionWindow.png";
 		document.getElementById('jourWindow').style.width = "350px";
 	}
 
 	//Highlighting Audio Option
 	function spriteAudio() {
-		document.getElementById('jourAudio').src = "Journal_Assets/OptionAudioHigh.png";
+		document.getElementById('jourAudio').src = "OptionAudioHigh.png";
 		document.getElementById('jourAudio').style.width = "350px";
 		ui.play();
 	}
 
 	function spriteBackAud() {
-		document.getElementById('jourAudio').src = "Journal_Assets/OptionAudio.png";
+		document.getElementById('jourAudio').src = "OptionAudio.png";
 		document.getElementById('jourAudio').style.width = "325px";
 	}
 
 	//Highlighting Visual Option
 	function spriteVisual() {
-		document.getElementById('jourVisual').src = "Journal_Assets/OptionVisualHigh.png";
+		document.getElementById('jourVisual').src = "OptionVisualHigh.png";
 		document.getElementById('jourVisual').style.width = "350px";
 		ui.play();
 	}
 
 	function spriteBackVis() {
-		document.getElementById('jourVisual').src = "Journal_Assets/OptionVisual.png";
+		document.getElementById('jourVisual').src = "OptionVisual.png";
 		document.getElementById('jourVisual').style.width = "325px";
 	}
 
 	//Highlighting Settings
 	//Highlighting Window Settings
 	function fullOn() {
-		document.getElementById('jourFullOn').src = 'Journal_Assets/OnHigh.png';
+		document.getElementById('jourFullOn').src = 'OnHigh.png';
 		document.getElementById('jourFullOn').style.width = '60px';
 		ui.play();
 	}
 
 	function fullOnOut() {
-		document.getElementById('jourFullOn').src = 'Journal_Assets/On.png';
+		document.getElementById('jourFullOn').src = 'On.png';
 		document.getElementById('jourFullOn').style.width = '50px';
 	}
 
 	function fullOff() {
-		document.getElementById('jourFullOff').src = 'Journal_Assets/OffHigh.png';
+		document.getElementById('jourFullOff').src = 'OffHigh.png';
 		document.getElementById('jourFullOff').style.width = '85px';
 		ui.play();
 	}
 
 	function fullOffOut() {
-		document.getElementById('jourFullOff').src = 'Journal_Assets/Off.png';
+		document.getElementById('jourFullOff').src = 'Off.png';
 		document.getElementById('jourFullOff').style.width = '75px';
 	}
 
 	function FPSOn() {
-		document.getElementById('jourFPSOn').src= 'Journal_Assets/OnHigh.png';
+		document.getElementById('jourFPSOn').src= 'OnHigh.png';
 		document.getElementById('jourFPSOn').style.width = '60px';
 		ui.play();
 	}
 
 	function FPSOnOut() {
-		document.getElementById('jourFPSOn').src= 'Journal_Assets/On.png';
+		document.getElementById('jourFPSOn').src= 'On.png';
 		document.getElementById('jourFPSOn').style.width = '50px';
 	}
 
 	function FPSOff() {
-		document.getElementById('jourFPSOff').src= 'Journal_Assets/OffHigh.png';
+		document.getElementById('jourFPSOff').src= 'OffHigh.png';
 		document.getElementById('jourFPSOff').style.width = '85px';
 		ui.play();
 	}
 
 	function FPSOffOut() {
-		document.getElementById('jourFPSOff').src= 'Journal_Assets/Off.png';
+		document.getElementById('jourFPSOff').src= 'Off.png';
 		document.getElementById('jourFPSOff').style.width = '75px';
 	}
 
 	//Highlighting Visual Settings
 	function curOn() {
-		document.getElementById('jourCurOn').src = 'Journal_Assets/OnHigh.png';
+		document.getElementById('jourCurOn').src = 'OnHigh.png';
 		document.getElementById('jourCurOn').style.width = '60px';
 		ui.play();
 	}
 
 	function curOnOut() {
-		document.getElementById('jourCurOn').src = 'Journal_Assets/On.png';
+		document.getElementById('jourCurOn').src = 'On.png';
 		document.getElementById('jourCurOn').style.width = '50px';
 	}
 
 	function curOff() {
-		document.getElementById('jourCurOff').src = 'Journal_Assets/OffHigh.png';
+		document.getElementById('jourCurOff').src = 'OffHigh.png';
 		document.getElementById('jourCurOff').style.width = '85px';
 		ui.play();
 	}
 
 	function curOffOut() {
-		document.getElementById('jourCurOff').src = 'Journal_Assets/Off.png';
+		document.getElementById('jourCurOff').src = 'Off.png';
 		document.getElementById('jourCurOff').style.width = '75px';
 	}
 
 	function highOn() {
-		document.getElementById('jourHighOn').src = 'Journal_Assets/OnHigh.png';
+		document.getElementById('jourHighOn').src = 'OnHigh.png';
 		document.getElementById('jourHighOn').style.width = '60px';
 		ui.play();
 	}
 
 	function highOnOut() {
-		document.getElementById('jourHighOn').src = 'Journal_Assets/On.png';
+		document.getElementById('jourHighOn').src = 'On.png';
 		document.getElementById('jourHighOn').style.width = '50px';
 	}
 
 	function highOff() {
-		document.getElementById('jourHighOff').src = 'Journal_Assets/OffHigh.png';
+		document.getElementById('jourHighOff').src = 'OffHigh.png';
 		document.getElementById('jourHighOff').style.width = '85px';
 		ui.play();
 	}
 
 	function highOffOut() {
-		document.getElementById('jourHighOff').src = 'Journal_Assets/Off.png';
+		document.getElementById('jourHighOff').src = 'Off.png';
 		document.getElementById('jourHighOff').style.width = '75px';
 	}
 
 	function largeHover() {
-		document.getElementById('jourLarge').src= 'Journal_Assets/LargeHigh.png';
+		document.getElementById('jourLarge').src= 'LargeHigh.png';
 		document.getElementById('jourLarge').style.width = '115px';
 		ui.play();
 	}
 
 	function largeOut() {
-		document.getElementById('jourLarge').src= 'Journal_Assets/Large.png';
+		document.getElementById('jourLarge').src= 'Large.png';
 		document.getElementById('jourLarge').style.width = '105px';
 	}
 
 	function mediumHover() {
-		document.getElementById('jourMedium').src= 'Journal_Assets/MediumHigh.png';
+		document.getElementById('jourMedium').src= 'MediumHigh.png';
 		document.getElementById('jourMedium').style.width = '145px';
 		ui.play();
 	}
 
 	function mediumOut() {
-		document.getElementById('jourMedium').src= 'Journal_Assets/Medium.png';
+		document.getElementById('jourMedium').src= 'Medium.png';
 		document.getElementById('jourMedium').style.width = '135px';
 	}
 
 	function smallHover() {
-		document.getElementById('jourSmall').src= 'Journal_Assets/SmallHigh.png';
+		document.getElementById('jourSmall').src= 'SmallHigh.png';
 		document.getElementById('jourSmall').style.width = '95px';
 		ui.play();
 	}
 
 	function smallOut() {
-		document.getElementById('jourSmall').src= 'Journal_Assets/Small.png';
+		document.getElementById('jourSmall').src= 'Small.png';
 		document.getElementById('jourSmall').style.width = '85px';
 	}
 
@@ -325,7 +325,7 @@ function spriteBackAr() {
 			mainSelect[i].style.display = "none";		
 		}
 
-		var pageplay = ['Sound_Assets/PageOneWhisper', 'Sound_Assets/PageTurnOne', 'Sound_Assets/PageTurnTwo', 'Sound_Assets/PageTurnThree'];
+		var pageplay = ['PageOneWhisper', 'PageTurnOne', 'PageTurnTwo', 'PageTurnThree'];
 		var pageplayFile = pageplay[Math.floor(Math.random() * pageplay.length)];
 		howlpage[pageplayFile].play();
 	}
@@ -335,7 +335,7 @@ function spriteBackAr() {
 		document.getElementById('ui').style.display = "none";
 		document.getElementById('resch').style.display = "inline";
 
-		var pageplay = ['Sound_Assets/PageOneWhisper', 'Sound_Assets/PageTurnOne', 'Sound_Assets/PageTurnTwo', 'Sound_Assets/PageTurnThree'];
+		var pageplay = ['PageOneWhisper', 'PageTurnOne', 'PageTurnTwo', 'PageTurnThree'];
 		var pageplayFile = pageplay[Math.floor(Math.random() * pageplay.length)];
 		howlpage[pageplayFile].play();
 	}
@@ -346,7 +346,7 @@ function spriteBackAr() {
 		document.getElementById('upgr').style.display = "inline";
 		document.getElementById('ar').style.display = "inline";
 
-		var pageplay = ['Sound_Assets/PageOneWhisper', 'Sound_Assets/PageTurnOne', 'Sound_Assets/PageTurnTwo', 'Sound_Assets/PageTurnThree'];
+		var pageplay = ['PageOneWhisper', 'PageTurnOne', 'PageTurnTwo', 'PageTurnThree'];
 		var pageplayFile = pageplay[Math.floor(Math.random() * pageplay.length)];
 		howlpage[pageplayFile].play();
 	}
@@ -357,7 +357,7 @@ function spriteBackAr() {
 		document.getElementById('win').style.display = "inline";
 		document.getElementById('ar').style.display = "inline";
 
-		var pageplay = ['Sound_Assets/PageOneWhisper', 'Sound_Assets/PageTurnOne', 'Sound_Assets/PageTurnTwo', 'Sound_Assets/PageTurnThree'];
+		var pageplay = ['PageOneWhisper', 'PageTurnOne', 'PageTurnTwo', 'PageTurnThree'];
 		var pageplayFile = pageplay[Math.floor(Math.random() * pageplay.length)];
 		howlpage[pageplayFile].play();
 	}
@@ -367,7 +367,7 @@ function spriteBackAr() {
 		document.getElementById('aud').style.display = "inline";
 		document.getElementById('ar').style.display = "inline";
 
-		var pageplay = ['Sound_Assets/PageOneWhisper', 'Sound_Assets/PageTurnOne', 'Sound_Assets/PageTurnTwo', 'Sound_Assets/PageTurnThree'];
+		var pageplay = ['PageOneWhisper', 'PageTurnOne', 'PageTurnTwo', 'PageTurnThree'];
 		var pageplayFile = pageplay[Math.floor(Math.random() * pageplay.length)];
 		howlpage[pageplayFile].play();
 	}
@@ -377,7 +377,7 @@ function spriteBackAr() {
 		document.getElementById('vis').style.display = "inline";
 		document.getElementById('ar').style.display = "inline";
 
-		var pageplay = ['Sound_Assets/PageOneWhisper', 'Sound_Assets/PageTurnOne', 'Sound_Assets/PageTurnTwo', 'Sound_Assets/PageTurnThree'];
+		var pageplay = ['PageOneWhisper', 'PageTurnOne', 'PageTurnTwo', 'PageTurnThree'];
 		var pageplayFile = pageplay[Math.floor(Math.random() * pageplay.length)];
 		howlpage[pageplayFile].play();
 	}
