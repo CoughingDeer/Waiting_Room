@@ -128,7 +128,7 @@ var closeJor = new Howl({
 	html5: true,
 });
 
-var pageplay = ['Sound_Assets/PageOneWhisper', 'Sound_Assets/PageTurnOne', 'Sound_Assets/PageTurnTwo', 'Sound_Assets/PageTurnThree'];
+var pageplay = ['PageOneWhisper', 'PageTurnOne', 'PageTurnTwo', 'PageTurnThree'];
 var howlpage = {};
 for (var i = 0; i < pageplay.length; i++) {
 	howlpage[pageplay[i]] = new Howl({
@@ -139,7 +139,7 @@ for (var i = 0; i < pageplay.length; i++) {
 };
 
 //Player Sound Effects
-var squeakPlay = ['Sound_Assets/Normal_Squeak/Squeak_One', 'Sound_Assets/Normal_Squeak/Squeak_Two', 'Sound_Assets/Normal_Squeak/Squeak_Three', 'Sound_Assets/Normal_Squeak/Squeak_Four', 'Sound_Assets/Normal_Squeak/Squeak_Five'];
+var squeakPlay = ['Squeak_One', 'Squeak_Two', 'Squeak_Three', 'Squeak_Four', 'Squeak_Five'];
 var howlSqueak = {};
 for (var i = 0; i < squeakPlay.length; i++) {
 	howlSqueak[squeakPlay[i]] = new Howl({
@@ -151,18 +151,18 @@ for (var i = 0; i < squeakPlay.length; i++) {
 
 //Tag Sprite Sound Effects
 var pageUp = new Howl({
-	src: ['Sound_Assets/Paper_Look_Up.mp3'],
+	src: ['Paper_Look_Up.mp3'],
 	volume: 0.5,
 	html5: true,
 });
 
 var pageDown = new Howl({
-	src: ['Sound_Assets/Paper_Set_Down.mp3'],
+	src: ['Paper_Set_Down.mp3'],
 	volume: 0.5,
 	html5: true,
 });
 
-var tagFrontLine = ['Voice_Lines/Sarc_1', 'Voice_Lines/Sarc_2', 'Voice_Lines/Agr_3', 'Voice_Lines/Agr_4'];
+var tagFrontLine = ['Sarc_1', 'Sarc_2', 'Agr_3', 'Agr_4'];
 var howlFrontLine = {};
 for (var i = 0; i < tagFrontLine.length; i++) {
 	howlFrontLine[tagFrontLine[i]] = new Howl({
@@ -172,7 +172,7 @@ for (var i = 0; i < tagFrontLine.length; i++) {
 	});
 };
 
-var tagSqueak = ['Voice_Lines/Tag_Squeak_One', 'Voice_Lines/Tag_Squeak_Two', 'Voice_Lines/Tag_Squeak_Three', 'Voice_Lines/Tag_Squeak_Four', 'Voice_Lines/Tag_Squeak_Five'];
+var tagSqueak = ['Tag_Squeak_One', 'Tag_Squeak_Two', 'Tag_Squeak_Three', 'Tag_Squeak_Four', 'Tag_Squeak_Five'];
 var howlTagSqueak = {};
 for (var i = 0; i < tagSqueak.length; i++) {
 	howlTagSqueak[tagSqueak[i]] = new Howl({
@@ -182,7 +182,7 @@ for (var i = 0; i < tagSqueak.length; i++) {
 	});
 };
 
-var tagOffend = ['Voice_Lines/Offend_1', 'Voice_Lines/Offend_2'];
+var tagOffend = ['Offend_1', 'Offend_2'];
 var howlOffend = {};
 for (var i = 0; i < tagOffend.length; i++) {
 	howlOffend[tagOffend[i]] = new Howl({
@@ -208,7 +208,7 @@ for (var i = 0; i < tagOffend.length; i++) {
 <!--Loading Screen Image-->
 
 <div id="screenLoad">
-	<img id="loadImg" src="Sprite_Assets/LoadingScreen.gif"></img>
+	<img id="loadImg" src="LoadingScreen.gif"></img>
 	<!--Waving Text-->
 	<div class="wavy">
         <span style="--i:1">L</span>
@@ -231,60 +231,60 @@ for (var i = 0; i < tagOffend.length; i++) {
 <div class="jourLay" id="jourOverlay">
 	
 	<!--Open Journal Menu-->
-	<img id="openjor" src="Journal_Assets/JournalOpen.png" alt="Open Journal">
+	<img id="openjor" src="JournalOpen.png" alt="Open Journal">
 
 		<!--Journal Menu UI-->
 		<div id="ui">
-			<img id="jourTitle" src="Journal_Assets/Title.png"></img>
-			<img onclick="moveRev()" onmouseover="spriteReview()" onmouseout="spriteBackRev()" id="jourReview" src="Journal_Assets/OptionReview.png"></img>
-			<img id="jourMap" src="Journal_Assets/OptionMap.png"></img>
-			<img onclick="moveKey()" onmouseover="spriteKey()" onmouseout="spriteBackKey()" id="jourKey" src="Journal_Assets/OptionKey.png"></img>
-			<img onmouseover="spriteCredit()" onmouseout="spriteBackCredit()" id="jourCredit" src="Journal_Assets/OptionCredit.png"></img>
+			<img id="jourTitle" src="Title.png"></img>
+			<img onclick="moveRev()" onmouseover="spriteReview()" onmouseout="spriteBackRev()" id="jourReview" src="OptionReview.png"></img>
+			<img id="jourMap" src="OptionMap.png"></img>
+			<img onclick="moveKey()" onmouseover="spriteKey()" onmouseout="spriteBackKey()" id="jourKey" src="OptionKey.png"></img>
+			<img onmouseover="spriteCredit()" onmouseout="spriteBackCredit()" id="jourCredit" src="OptionCredit.png"></img>
 
-			<img onclick="moveWindow()" onmouseover="spriteWindow()" onmouseout="spriteBackWin()" id="jourWindow" src="Journal_Assets/OptionWindow.png"></img>
-			<img onclick="moveAudio()" onmouseover="spriteAudio()" onmouseout="spriteBackAud()" id="jourAudio" src="Journal_Assets/OptionAudio.png"></img>
-			<img onclick ="moveVisual()" onmouseover="spriteVisual()" onmouseout="spriteBackVis()" id="jourVisual" src="Journal_Assets/OptionVisual.png"></img>
+			<img onclick="moveWindow()" onmouseover="spriteWindow()" onmouseout="spriteBackWin()" id="jourWindow" src="OptionWindow.png"></img>
+			<img onclick="moveAudio()" onmouseover="spriteAudio()" onmouseout="spriteBackAud()" id="jourAudio" src="OptionAudio.png"></img>
+			<img onclick ="moveVisual()" onmouseover="spriteVisual()" onmouseout="spriteBackVis()" id="jourVisual" src="OptionVisual.png"></img>
 		</div>
 
 		<!--Back Arrow-->
 		<div class="mainHide" id="ar">
-			<img onclick="moveArrow()" onmouseover="spriteArrow()" onmouseout="spriteBackAr()" id="jourArrow" src="Journal_Assets/arrow.png"></img>
+			<img onclick="moveArrow()" onmouseover="spriteArrow()" onmouseout="spriteBackAr()" id="jourArrow" src="arrow.png"></img>
 		</div>
 
 		<!--Research Menu-->
 		<div class="mainHide" id="resch">
 			<div id="pageOne">
-				<img id="labOne" src="Journal_Assets/ResLabelOne.png"></img>
-				<img id="rotResch" src="Journal_Assets/RotResearch.png"></img>
+				<img id="labOne" src="ResLabelOne.png"></img>
+				<img id="rotResch" src="RotResearch.png"></img>
 			</div>
 			<div id="pageTwo">
-				<img id="labTwo" src="Journal_Assets/ResLabelTwo.png"></img>
-				<img id="buntResch" src="Journal_Assets/BuntResearch.png"></img>
-				<img id="tagResch" src="Journal_Assets/TagResearch.png"></img>
+				<img id="labTwo" src="ResLabelTwo.png"></img>
+				<img id="buntResch" src="BuntResearch.png"></img>
+				<img id="tagResch" src="TagResearch.png"></img>
 			</div>
 		</div>
 
 		<!--Upgrade Menu-->
 		<div class="mainHide" id="upgr">
-			<img id="jourBadge" src="Journal_Assets/BadgePage.png"></img>
-			<img onmouseover="spriteBadge()" onmouseout="spriteBackBadge()" id="badgeHead" src="Journal_Assets/BadgeUpgrade.png"></img>
-			<img id="jourUpgrade" src="Journal_Assets/UpgradePage.png"></img>
+			<img id="jourBadge" src="BadgePage.png"></img>
+			<img onmouseover="spriteBadge()" onmouseout="spriteBackBadge()" id="badgeHead" src="BadgeUpgrade.png"></img>
+			<img id="jourUpgrade" src="UpgradePage.png"></img>
 		</div>
 
 		<!--Settings Section-->
 		<!--Window Settings-->
 		<div class="mainHide" id="win">
-			<img id="jourWinTitle" src="Journal_Assets/WinTitle.png"></img>
-			<img id="jourRefresh" src="Journal_Assets/Refresh.png"></img>
-			<img id="jourFullOn" src="Journal_Assets/On.png" onmouseover="fullOn()" onmouseout="fullOnOut()" onclick="fullScreenOn()"></img>
-			<img id="jourFullOff" src="Journal_Assets/Off.png" onmouseover="fullOff()" onmouseout="fullOffOut()" onclick="fullScreenOff()"></img>
-			<img id="jourFPSOn" src="Journal_Assets/On.png" onmouseover="FPSOn()" onmouseout="FPSOnOut()" onclick="FPSCount()"></img>
-			<img id="jourFPSOff" src="Journal_Assets/Off.png" onmouseover="FPSOff()" onmouseout="FPSOffOut()"></img>
+			<img id="jourWinTitle" src="WinTitle.png"></img>
+			<img id="jourRefresh" src="Refresh.png"></img>
+			<img id="jourFullOn" src="On.png" onmouseover="fullOn()" onmouseout="fullOnOut()" onclick="fullScreenOn()"></img>
+			<img id="jourFullOff" src="Off.png" onmouseover="fullOff()" onmouseout="fullOffOut()" onclick="fullScreenOff()"></img>
+			<img id="jourFPSOn" src="On.png" onmouseover="FPSOn()" onmouseout="FPSOnOut()" onclick="FPSCount()"></img>
+			<img id="jourFPSOff" src="Off.png" onmouseover="FPSOff()" onmouseout="FPSOffOut()"></img>
 		</div>
 
 		<!--Audio Settings-->
 		<div class="mainHide" id="aud">
-			<img id="jourAudTitle" src="Journal_Assets/AudTitle.png"></img>
+			<img id="jourAudTitle" src="AudTitle.png"></img>
 			<input class="slider" id="masterSlider" type="range" min="0.0" max="1.0" step="0.01" value="0.5"></input>
 			<input class="slider" id="musicSlider" type="range" min="0.0" max="1.0" step="0.01" value="0.4"></input>
 			<input class="slider" id="SFXSlider" type="range" min="0.0" max="1.0" step="0.01" value="0.5"></input>
@@ -293,14 +293,14 @@ for (var i = 0; i < tagOffend.length; i++) {
 
 		<!--Visual Settings-->
 		<div class="mainHide" id="vis">
-			<img id="jourVisTitle" src="Journal_Assets/VisTitle.png"></img>
-			<img id="jourCurOn" src="Journal_Assets/On.png" onmouseover="curOn()" onmouseout="curOnOut()"></img>
-			<img id="jourCurOff" src="Journal_Assets/Off.png" onmouseover="curOff()" onmouseout="curOffOut()"></img>
-			<img id="jourLarge" src="Journal_Assets/Large.png" onmouseover="largeHover()" onmouseout="largeOut()" onclick="largeAct()"></img>
-			<img id="jourMedium" src="Journal_Assets/Medium.png" onmouseover="mediumHover()" onmouseout="mediumOut()" onclick="mediumAct()"></img>
-			<img id="jourSmall" src="Journal_Assets/Small.png" onmouseover="smallHover()" onmouseout="smallOut()" onclick="smallAct()"></img>
-			<img id="jourHighOn" src="Journal_Assets/On.png" onmouseover="highOn()" onmouseout="highOnOut()"></img>
-			<img id="jourHighOff" src="Journal_Assets/Off.png" onmouseover="highOff()" onmouseout="highOffOut()"></img>
+			<img id="jourVisTitle" src="VisTitle.png"></img>
+			<img id="jourCurOn" src="On.png" onmouseover="curOn()" onmouseout="curOnOut()"></img>
+			<img id="jourCurOff" src="Off.png" onmouseover="curOff()" onmouseout="curOffOut()"></img>
+			<img id="jourLarge" src="Large.png" onmouseover="largeHover()" onmouseout="largeOut()" onclick="largeAct()"></img>
+			<img id="jourMedium" src="Medium.png" onmouseover="mediumHover()" onmouseout="mediumOut()" onclick="mediumAct()"></img>
+			<img id="jourSmall" src="Small.png" onmouseover="smallHover()" onmouseout="smallOut()" onclick="smallAct()"></img>
+			<img id="jourHighOn" src="On.png" onmouseover="highOn()" onmouseout="highOnOut()"></img>
+			<img id="jourHighOff" src="Off.png" onmouseover="highOff()" onmouseout="highOffOut()"></img>
 		</div>
 	</img>
 </div>
