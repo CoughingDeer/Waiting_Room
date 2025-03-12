@@ -46,7 +46,7 @@ function jourOpen(evt) {
 	}
 	//Speaking Puppet by pressing S
 	else if (evt.key == "s") {
-		var squeakPlay = ['Squeak_One', 'Squeak_Two', 'Squeak_Three', 'Squeak_Four', 'Normal_Squeak/Squeak_Five'];
+		var squeakPlay = ['Squeak_One', 'Squeak_Two', 'Squeak_Three', 'Squeak_Four', 'Squeak_Five'];
     	var squeakFile = squeakPlay[Math.floor(Math.random() * squeakPlay.length)];
 
 		howlSqueak[squeakFile].play();
