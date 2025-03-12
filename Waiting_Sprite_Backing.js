@@ -21,16 +21,16 @@ function tagSpeak() {
 	howlFrontLine[tagFile].play();
 
     switch (tagFile) {
-        case 'Voice_Lines/Sarc_1':
+        case 'Sarc_1':
             document.getElementById('cap10').style.display = 'inline';
             break;
-        case 'Voice_Lines/Sarc_2':
+        case 'Sarc_2':
             document.getElementById('cap11').style.display = 'inline';
             break;
-        case 'Voice_Lines/Agr_3':
+        case 'Agr_3':
             document.getElementById('cap8').style.display = 'inline';
             break;
-        case 'Voice_Lines/Agr_4':
+        case 'Agr_4':
             document.getElementById('cap9').style.display = 'inline';
             break;
     };
@@ -51,10 +51,10 @@ function tagReact() {
     var offendFile = tagOffend[Math.floor(Math.random() * tagOffend.length)];
 
     switch (offendFile) {
-        case 'Voice_Lines/Offend_1':
+        case 'Offend_1':
             document.getElementById('cap4').style.display = 'inline';
             break;
-        case 'Voice_Lines/Offend_2':
+        case 'Offend_2':
             document.getElementById('cap5').style.display = 'inline';
             break;
     };
