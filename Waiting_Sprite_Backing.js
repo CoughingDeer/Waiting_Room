@@ -2,12 +2,12 @@
 //Used for Sprite interactions and events mainly!
 
 function tagInteract() {
-    document.getElementById('tag').src = 'Sprite_Assets/Tag_Hover.gif';
+    document.getElementById('tag').src = 'Tag_Hover.gif';
     pageUp.play();
 };
 
 function tagOut() {
-    document.getElementById('tag').src = 'Sprite_Assets/Tag_Idle.png';
+    document.getElementById('tag').src = 'Tag_Idle.png';
     pageDown.play();
 };
 
@@ -15,7 +15,7 @@ function tagSpeak() {
 
     var captionList = document.querySelectorAll('.cap');
 
-    var tagFrontLine = ['Voice_Lines/Sarc_1', 'Voice_Lines/Sarc_2', 'Voice_Lines/Agr_3', 'Voice_Lines/Agr_4'];
+    var tagFrontLine = ['Sarc_1', 'Sarc_2', 'Agr_3', 'Agr_4'];
     var tagFile = tagFrontLine[Math.floor(Math.random() * tagFrontLine.length)];
 
 	howlFrontLine[tagFile].play();
@@ -47,7 +47,7 @@ function tagReact() {
     var captionList = document.querySelectorAll('.cap');
     var squeakCount = 0;
 
-    var tagOffend = ['Voice_Lines/Offend_1', 'Voice_Lines/Offend_2'];
+    var tagOffend = ['Offend_1', 'Offend_2'];
     var offendFile = tagOffend[Math.floor(Math.random() * tagOffend.length)];
 
     switch (offendFile) {
@@ -65,7 +65,7 @@ function tagReact() {
         };
     });
 
-    var tagSqueak = ['Voice_Lines/Tag_Squeak_One', 'Voice_Lines/Tag_Squeak_Two', 'Voice_Lines/Tag_Squeak_Three', 'Voice_Lines/Tag_Squeak_Four', 'Voice_Lines/Tag_Squeak_Five'];
+    var tagSqueak = ['Tag_Squeak_One', 'Tag_Squeak_Two', 'Tag_Squeak_Three', 'Tag_Squeak_Four', 'Tag_Squeak_Five'];
     var tagSqueakFile = tagSqueak[Math.floor(Math.random() * tagSqueak.length)];
 
     if (squeakCount <= 10) {
